@@ -1,0 +1,17 @@
+#Build a Docker container to serve a static website (HTML, CSS, JavaScript). This project will \
+#introduce you to exposing ports, volume mapping, and basic container networking.
+
+#First we have to chooose base image suitable for website hosting
+# Start by selecting an appropriate base image for your container. A lightweight web server image like Nginx or Apache is commonly used for serving static websites. 
+#You can find official Docker images for these web servers on Docker Hub.
+
+FROM nginx:latest
+
+
+
+#Copying the required files to host website to the working directory
+COPY /. /usr/share/nginx/html
+
+
+#Specify which port your web server inside the container will listen on. 
+#For example, you can expose port 80 for HTTP traffic. Use the EXPOSE instruction in your Dockerfile to declare the exposed port.
