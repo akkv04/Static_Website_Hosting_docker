@@ -1,13 +1,14 @@
 #docker build to create an image
-  docker build . -t static_website:first
-#this will create an image static_website and tag named first
+  docker build . -t static_website:apache
+#this will create an image static_website and tag named apache
 
-  docker run -d -p 8080:80 static_website:first
+  docker run -d -p 8080:80 static_website:apache
     #this will run the container
-    #port 8080 has to be mapped to teh container port 80 - PORT Mapping
+    #port 8080 has to be mapped to the container port 80 - PORT Mapping
     #without this static website wont be availalbe in 8080 port
 
     #-d flag is to detach
 
 
     #localhost:8080 - type in your browser to check whether static website hosted is working or not
+
