@@ -1,0 +1,10 @@
+FROM httpd:latest
+# Copy the custom HTML file to the default Apache web root directory
+COPY index.html /usr/local/apache2/htdocs/
+EXPOSE 80
+# Command to start Apache when the container starts
+CMD ["httpd-foreground"]
+
+
+
+
