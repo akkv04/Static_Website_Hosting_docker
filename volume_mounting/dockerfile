@@ -1,0 +1,9 @@
+FROM nginx:latest
+
+#rather than copying the files using COPY to nginx webroot directory
+#we will try volume mounting, which will mount the volume in the docker engine to the container
+#hence container default webroot directory will be the directory which we mentioned for the volume mounting
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
