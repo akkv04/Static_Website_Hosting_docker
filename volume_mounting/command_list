@@ -1,0 +1,5 @@
+docker build . -t static #-this will create image named static
+
+folder stturcture: pwd--> index_folder ---> index.html
+
+docker run -p 8080:80 -v ./index_folder:/usr/share/nginx/html static
